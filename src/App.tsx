@@ -1,4 +1,4 @@
-import WeatherChart from './WeatherChart';
+import WeatherChart from './features/weather/WeatherChart';
 
 export default function App() {
     return (

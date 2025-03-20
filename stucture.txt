@@ -1,0 +1,26 @@
+/src
+│── /api                  # API 請求相關
+│    ├── weather.ts        # 獨立封裝 API 請求
+│
+│── /hooks                # 自定義 Hooks
+│    ├── useClimateData.ts # 處理氣候數據
+│
+│── /components           # 通用元件（可復用）
+│    ├── ChartContainer.tsx  # 可能的通用圖表容器
+│
+│── /features             # 主要功能區塊（按功能分類）
+│    │── /weather         # WeatherChart 相關的功能
+│    │    ├── WeatherChart.tsx
+│    │    ├── TemperatureChart.tsx
+│    │    ├── PrecipitationChart.tsx
+│    │    ├── weather.module.css  # 這個功能的樣式
+│
+│── /styles               # 全域樣式（如果需要）
+│    ├── global.css
+│
+│── /utils                # 工具函式
+│    ├── format.ts         # 格式化數據的工具
+│
+│── App.tsx               # 主要應用入口
+│── main.tsx              # React 渲染入口
+│── index.html            # HTML 主結構
