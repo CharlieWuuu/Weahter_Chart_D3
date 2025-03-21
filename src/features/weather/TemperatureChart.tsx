@@ -31,9 +31,12 @@ export default function TemperatureChart({ data }: Props) {
             .range([margin.left, width - margin.right])
             .padding(0.2);
 
+        let scaleMinTemp = d3.min(data, (d) => +d.minTemp)! < 0 ? d3.min(data, (d) => +d.minTemp)! : 0;
+        let scaleMaxTemp = d3.max(data, (d) => +d.maxTemp)!;
+
         const y = d3
             .scaleLinear()
-            .domain([0, d3.max(data, (d) => +d.maxTemp)!])
+            .domain([scaleMinTemp, scaleMaxTemp])
             .nice()
             .range([height - margin.bottom, margin.top]);
 
